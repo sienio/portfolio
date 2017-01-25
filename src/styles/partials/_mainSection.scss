@@ -19,10 +19,13 @@ section {
 .name_container {
     border-left: 5px solid $secondColor;
     padding-left: 15px;
+    background: rgba(255, 255, 255, 0.06);
+    width: 285px;
+    padding-bottom: 5px;
+    margin-top: 50px;
 
     .name_container-title {
         font-size: $h1FontSize;
-        margin: 50px auto auto;
         text-transform: uppercase;
 
         span {

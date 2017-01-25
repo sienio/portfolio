@@ -3,6 +3,7 @@
 * {
     box-sizing: border-box;
     font-family: Lato, sans-serif;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 }
 
 body {
@@ -13,7 +14,6 @@ body {
     text-align: center;
     min-height: 100%;
     width: 100%;
-    padding-top: 100px;
 }
 
 .menu {
@@ -71,15 +71,32 @@ body {
     }
 
     .main-face {
-        background: lighten($block-color, 20%);
+        background: $firstColor;
         transform: translateZ(30px);
         color: white;
         text-transform: uppercase;
     }
 
     .top-face {
-        background: darken($block-color, 20%);
+        background: $secondColor;
         color: white;
         transform: rotateX(90deg) translateZ(30px);
+    }
+}
+
+.arrow-top{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid $secondColor;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    &:nth-child{
+        position: absolute;
+        height: 40px;
+        width: 3px;
+        background-color: $secondColor;
+
     }
 }

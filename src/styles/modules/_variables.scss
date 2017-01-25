@@ -1,16 +1,21 @@
 $loadingCubeSize: 200px;
-
-$mainSectionColor: #000626;
-$secondColor: #d72229;
-
 $loadingCubeColor: rgba(3,169,244,0.8);
 $loadingTime: 1.5s;
+$block-color: $loadingCubeColor;
+
+$mainSectionColor: #000626;
+$firstColor: #000626;
+$secondColor: #ed0049;
+
 
 $ease_out: cubic-bezier(.4,.2,.2,1);
 
-$block-color: $loadingCubeColor;
 
 $h1FontSize: 4rem;
 $h2FontSize: 2rem;
 
 $name_container-subtitle: 0.75rem;
+
+
+$skills-gradient: linear-gradient(135deg, rgba(0, 6, 38, 0.85) 0%, rgba(5, 9, 28, 0.86) 100%);
+$skill-text: 0.75rem;
