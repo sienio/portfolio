@@ -41,7 +41,7 @@
 
                     <h1 class="name_container-title"><span>Michał</span><br>
             Sieński<span class="dot">.</span></h1>
-                    <span class="name_container-subtitle red">Junior </span><span class="name_container-subtitle ">Front End Developer & Web Designer</span>
+                    <<span class="name_container-subtitle ">Front End Developer & Web Designer</span>
                 </div>
                 <div class="main-image">
                     <img src="dist/images/me.jpg" alt="">
@@ -109,34 +109,34 @@
                 <h2 class="text-center">Umiejętności</h2>
                 <div class="row">
                     <div class="skill-box">
-                        <img class="img-skills" src="dist/images/skills/html.png" alt="">
+                        <img class="img-skills" src="dist/images/skills/html.png" alt="html skill icon">
                     </div>
                     <div class="skill-box">
-                        <img class="img-skills" src="dist/images/skills/css.png" alt="">
+                        <img class="img-skills" src="dist/images/skills/css.png" alt="css skill icon">
                     </div>
                     <div class="skill-box">
-                        <img class="img-skills" src="dist/images/skills/sass.png" alt="">
+                        <img class="img-skills" src="dist/images/skills/sass.png" alt="sass skill icon">
                     </div>
                     <div class="skill-box">
-                        <img class="img-skills" src="dist/images/skills/ap.png" alt="">
+                        <img class="img-skills" src="dist/images/skills/ap.png" alt="skill icon">
                     </div>
                     <div class="skill-box">
-                        <img class="img-skills" src="dist/images/skills/js.png" alt="">
+                        <img class="img-skills" src="dist/images/skills/js.png" alt="skill icon">
                     </div>
                     <div class="skill-box">
-                        <img class="img-skills" src="dist/images/skills/jquery.png" alt="">
+                        <img class="img-skills" src="dist/images/skills/jquery.png" alt="skill icon">
                     </div>
                     <div class="skill-box">
-                        <img class="img-skills" src="dist/images/skills/bootstrap.png" alt="">
+                        <img class="img-skills" src="dist/images/skills/bootstrap.png" alt="skill icon">
                     </div>
                     <div class="skill-box">
-                        <img class="img-skills" src="dist/images/skills/rwd.png" alt="">
+                        <img class="img-skills" src="dist/images/skills/rwd.png" alt="skill icon">
                     </div>
                     <div class="skill-box">
-                        <img class="img-skills" src="dist/images/skills/pth.png" alt="">
+                        <img class="img-skills" src="dist/images/skills/pth.png" alt="skill icon">
                     </div>
                     <div class="skill-box">
-                        <img class="img-skills" src="dist/images/skills/wordpress.png" alt="">
+                        <img class="img-skills" src="dist/images/skills/wordpress.png" alt="skill icon">
                     </div>
                 </div>
             </div>
@@ -147,32 +147,36 @@
         <div class="container">
             <div class="row">
                 <div class="contact-wrapper">
-                    <form class="contact-form" action="index.html" method="post">
+                    <form id="formularz" class="contact-form" method="post" action="send-email.php">
                         <label for="name">Imię i Nazwisko</label>
-                        <input type="text" name="name" value="Imię i Nazwisko" required="true">
+                        <input type="text" id="name" name="name">
+                        <span class="statement"></span>
+
                         <label for="enail">Addres email</label>
-                        <input type="email" name="email" value="Podaj swoj adres email">
+                        <input type="email" id="email" name="email">
+                        <span class="statement"></span>
+
                         <label for="message">Wpisz treść wiadomości</label>
-                        <textarea name="message" rows="8"></textarea>
-                        <input type="submit" name="submit" value="Wyślij wiadomość">
+                        <textarea id="message" name="message" rows="8" placeholder="Wpisz treść swojej wiadomości..."></textarea>
+                        <span class="statement"></span>
+
+                        <input id="submit" type="submit" class="submit disabled" name="submit" value="Wyślij wiadomość" title="Aby wysłać wiadomość uzupełnij powyższe pola">
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="arrow-top">
+    <div class="arrow-top" title="Wroc do gory">
         <span></span>
         <span></span>
         <span></span>
     </div>
-    <script type="text/javascript">
-        $(window).load(function() { // Czekamy na załadowanie całej zawartości strony
-            var $loadingWrapper = $(".loading-wrapper");
-            $loadingWrapper.delay(2500).fadeOut("slow"); // Usuwamy diva przysłaniającego stronę
-        })
-    </script>
+
+
+
     <script src="/dist/js/particles.js" charset="utf-8"></script>
+    <script src="/dist/js/main.js" charset="utf-8"></script>
 </body>
 
 </html>

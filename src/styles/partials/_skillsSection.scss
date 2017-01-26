@@ -1,6 +1,5 @@
 section {
-    min-height: 50vh;
-
+    // min-height: 50vh;
     &#skills {
         width: 100%;
         background-image: url("/dist/images/skills/background.jpg");
@@ -11,7 +10,7 @@ section {
 
         .skills-gradient {
             background: $skills-gradient;
-            height: 100%;
+            min-height: 100%;
         }
 
         .row {
@@ -19,7 +18,6 @@ section {
             align-items: center;
             justify-content: space-around;
             flex-wrap: wrap;
-
         }
     }
 
@@ -27,29 +25,119 @@ section {
         display: flex;
         align-items: center;
         justify-content: center;
+        background-image: url("/dist/images/contact/background.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+        background-attachment: fixed;
+
         .contact-wrapper {
             background-color: $firstColor;
             height: 100%;
             width: 100%;
-            margin: auto;
+            margin: 50px auto;
+            padding-top: 50px;
+
             .contact-form {
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
-                input:not([type="submit"]){
+                position: relative;
+
+                input:not([type="submit"]) {
                     width: 80%;
+                    color: #ffffff;
+                    padding: 5px 10px;
+                    background: #ffffff;
+                    border: none;
+                    border: 1px solid transparent;
+                    border-left: 3px solid #ed0049;
+                    transition: border 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+
+                    &.invalid {
+                        border: 1px solid #ed0049;
+                        border-left: 5px solid #ed0049;
+                        background-color: rgba(237, 0, 73, 0.25);
+                    }
+
+                    &.valid {
+                        border: 1px solid green;
+                        border-left: 5px solid green;
+                        background-color: rgba(0, 128, 0, 0.25);
+                    }
                 }
-                textarea{
+
+                textarea {
                     width: 80%;
+                    padding: 5px 10px;
+                    background: #ffffff;
+                    border: none;
+                    border-left: 3px solid $secondColor;
+                    color: #ffffff;
+                    font-size: 1rem;
+
+                    &.invalid {
+                        border: 1px solid #ed0049;
+                        border-left: 5px solid #ed0049;
+                        background-color: rgba(237, 0, 73, 0.25);
+                    }
+
+                    &.valid {
+                        border: 1px solid green;
+                        border-left: 5px solid green;
+                        background-color: rgba(0, 128, 0, 0.25);
+                    }
+                }
+
+                input[type="submit"] {
+                    &.submit {
+                        padding: 15px 50px;
+                        background-color: $secondColor;
+                        border: none;
+                        margin: 20px 0;
+                        color: white;
+                        font-size: 1.5rem;
+                    }
                 }
             }
-            label{
-                color: white;
+
+            label {
+                color: #ffffff;
                 text-align: left;
+                width: 80%;
+                margin: 15px 0 5px;
+                font-size: 1.25rem;
+            }
+
+            .statement {
+                display: none;
+                transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+                top: 10px;
+                position: relative;
+                padding: 5px 10px;
+                border-radius: 3px;
+
+                &.error {
+                    display: block;
+                    background: rgb(255, 255, 255);
+                    color: red;
+                }
+
+                &.success {
+                    display: block;
+                    background: rgb(255, 255, 255);
+                    color: green;
+                }
             }
         }
     }
+}
+
+.disabled {
+    cursor: not-allowed;
+    background-color: #ffffff !important;
+    color: rgba(158, 158, 158, ) !important;
 }
 
 .skill-box {
@@ -59,7 +147,7 @@ section {
     display: inline-block;
     width: 130px;
     height: 130px;
-    margin: 35px 35px;
+    margin: 35px;
     text-align: center;
     border-radius: 50%;
 

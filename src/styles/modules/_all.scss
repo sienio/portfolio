@@ -84,7 +84,7 @@ body {
     }
 }
 
-.arrow-top{
+.arrow-top {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -92,11 +92,37 @@ body {
     position: fixed;
     bottom: 40px;
     right: 40px;
-    &:nth-child{
-        position: absolute;
-        height: 40px;
-        width: 3px;
-        background-color: $secondColor;
+    cursor: pointer;
+    transition: background 0.4s ease-in-out;
+    opacity: 0.5;
 
+    span {
+        left: 50%;
+        top: 50%;
+        height: 30px;
+        width: 4px;
+        position: absolute;
+        background-color: $secondColor;
+        transform: translateX(-50%) translateY(-50%);
+        transition: background 0.4s ease-in-out;
+
+        &:first-child {
+            top: 9px;
+            left: 20px;
+            height: 20px;
+            transform: rotate(45deg);
+        }
+
+        &:last-child {
+            top: 9px;
+            left: 32px;
+            height: 20px;
+            transform: rotate(-45deg);
+        }
+    }
+
+    &:hover {
+        background-color: $firstColor;
+        opacity: 0.85;
     }
 }
