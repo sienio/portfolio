@@ -37,6 +37,7 @@ section {
             width: 100%;
             margin: 50px auto;
             padding-top: 50px;
+            box-shadow: 0 5px 5px rgba(0,0,0,.14), 0 -5px 8px rgba(0,0,0,.28), -5px 0 8px rgba(0,0,0,.28), 5px 0 8px rgba(0,0,0,.28);
 
             .contact-form {
                 display: flex;
@@ -54,6 +55,8 @@ section {
                     border: 1px solid transparent;
                     border-left: 3px solid #ed0049;
                     transition: border 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+                    font-size: 1.15rem;
+                    font-weight: 100;
 
                     &.invalid {
                         border: 1px solid #ed0049;
@@ -98,6 +101,7 @@ section {
                         margin: 20px 0;
                         color: white;
                         font-size: 1.5rem;
+                        cursor: pointer;
                     }
                 }
             }
@@ -135,15 +139,12 @@ section {
 }
 
 .disabled {
-    cursor: not-allowed;
-    background-color: #ffffff !important;
-    color: rgba(158, 158, 158, ) !important;
+    cursor: not-allowed !important;
 }
 
 .skill-box {
     border: 4px solid $secondColor;
     padding: 15px;
-    position: relative;
     display: inline-block;
     width: 130px;
     height: 130px;

@@ -51,8 +51,14 @@ body {
 
 .menu-wrapper {
   text-align: center;
-  min-height: 100%;
-  width: 100%; }
+  width: 100%;
+  background-color: #000626; }
+
+.main-nav-fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.14), 0 5px 8px rgba(0, 0, 0, 0.28); }
 
 .menu {
   display: inline-block;
@@ -138,6 +144,61 @@ body {
   .arrow-top:hover {
     background-color: #000626;
     opacity: 0.85; }
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
+.item {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 50px 0;
+  padding: 0 10px; }
+  .item .portfolio-left-box {
+    width: 50%; }
+  .item .portfolio-right-box {
+    width: 50%; }
+
+.project-description {
+  font-size: 16px;
+  padding: 80px 0 20px 40px; }
+  .project-description .project-title {
+    line-height: 1.1;
+    color: #000626;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 36px;
+    margin-bottom: 50px; }
+
+.list-inline {
+  display: -ms-inline-flexbox;
+  display: inline-flex; }
+  .list-inline li {
+    list-style: none; }
+  .list-inline .pt-item > img {
+    width: 55px;
+    display: block;
+    border-radius: 50%;
+    border: 3px solid red;
+    background: #000626;
+    padding: 5px;
+    margin-left: 3px; }
+
+.controls {
+  margin: auto;
+  width: 60px; }
+  .controls .carousel-control {
+    font-size: 4rem; }
+  .controls > a {
+    text-decoration: none; }
 
 .loading-wrapper {
   position: fixed;
@@ -302,7 +363,8 @@ section#contact {
     height: 100%;
     width: 100%;
     margin: 50px auto;
-    padding-top: 50px; }
+    padding-top: 50px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.14), 0 -5px 8px rgba(0, 0, 0, 0.28), -5px 0 8px rgba(0, 0, 0, 0.28), 5px 0 8px rgba(0, 0, 0, 0.28); }
     section#contact .contact-wrapper .contact-form {
       display: -ms-flexbox;
       display: flex;
@@ -321,7 +383,9 @@ section#contact {
         border: none;
         border: 1px solid transparent;
         border-left: 3px solid #ed0049;
-        transition: border 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28); }
+        transition: border 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+        font-size: 1.15rem;
+        font-weight: 100; }
         section#contact .contact-wrapper .contact-form input:not([type="submit"]).invalid {
           border: 1px solid #ed0049;
           border-left: 5px solid #ed0049;
@@ -352,7 +416,8 @@ section#contact {
         border: none;
         margin: 20px 0;
         color: white;
-        font-size: 1.5rem; }
+        font-size: 1.5rem;
+        cursor: pointer; }
     section#contact .contact-wrapper label {
       color: #ffffff;
       text-align: left;
@@ -376,14 +441,11 @@ section#contact {
         color: green; }
 
 .disabled {
-  cursor: not-allowed;
-  background-color: rgba(158, 158, 158, 0.28) !important;
-  color: rgba(158, 158, 158, 0.28) !important; }
+  cursor: not-allowed !important; }
 
 .skill-box {
   border: 4px solid #ed0049;
   padding: 15px;
-  position: relative;
   display: inline-block;
   width: 130px;
   height: 130px;

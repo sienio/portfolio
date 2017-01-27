@@ -26,6 +26,18 @@ $(document).ready(function () {
     });
 
 
+    var mainMenu = $("#main-menu");
+    var mainMenuheight = $('#main').height();
+
+    $(window).on('scroll',function () {
+        if ($(this).scrollTop() > mainMenuheight) {
+            mainMenu.addClass('main-nav-fixed');
+        } else {
+            mainMenu.removeClass('main-nav-fixed');
+        }
+    });
+
+
     // form validation
     //Walidacja nazwy
     $('#name').on('blur, keyup', function () {
@@ -47,8 +59,8 @@ $(document).ready(function () {
             input
                 .next('.statement')
                 .text("Nazwa musi mieć więcej niż 3 i mniej niż 16 znaków!")
-                .removeClass("error")
-                .addClass("success");
+                .removeClass("success")
+                .addClass("error");
 
         }
     });
