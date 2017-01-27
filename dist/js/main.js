@@ -2,8 +2,9 @@ $(window).load(function () {
     var $loadingWrapper = $(".loading-wrapper");
     $loadingWrapper
         .delay(1500)
-        .fadeOut("slow");
-
+        .fadeOut('slow');
+        var $sections = $('section');
+        $sections.fadeIn('slow')
     setTimeout(function () {
         $loadingWrapper.remove();
     }, 2000);

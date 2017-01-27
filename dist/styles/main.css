@@ -58,6 +58,7 @@ body {
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 1;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.14), 0 5px 8px rgba(0, 0, 0, 0.28); }
 
 .menu {
@@ -111,6 +112,9 @@ body {
     color: white;
     transform: rotateX(90deg) translateZ(30px); }
 
+.text-center {
+  text-align: center; }
+
 .arrow-top {
   width: 60px;
   height: 60px;
@@ -162,14 +166,10 @@ body {
       flex-wrap: wrap;
   margin: 50px 0;
   padding: 0 10px; }
-  .item .portfolio-left-box {
-    width: 50%; }
-  .item .portfolio-right-box {
-    width: 50%; }
 
 .project-description {
   font-size: 16px;
-  padding: 80px 0 20px 40px; }
+  padding: 30px 0 20px 40px; }
   .project-description .project-title {
     line-height: 1.1;
     color: #000626;
@@ -179,11 +179,16 @@ body {
     margin-bottom: 50px; }
 
 .list-inline {
-  display: -ms-inline-flexbox;
-  display: inline-flex; }
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  margin: 10px 0 15px; }
   .list-inline li {
     list-style: none; }
-  .list-inline .pt-item > img {
+  .list-inline .technics-item > img {
     width: 55px;
     display: block;
     border-radius: 50%;
@@ -336,7 +341,7 @@ section#skills {
   section#skills .skills-gradient {
     background: linear-gradient(135deg, rgba(0, 6, 38, 0.85) 0%, rgba(5, 9, 28, 0.86) 100%);
     min-height: 100%; }
-  section#skills .row {
+  section#skills .skills-wrapper {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
@@ -344,7 +349,13 @@ section#skills {
     -ms-flex-pack: distribute;
         justify-content: space-around;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
+        flex-wrap: wrap;
+    margin: 25px 0 50px; }
+  section#skills h3 {
+    font-size: 2rem;
+    margin: 50px 0 0;
+    text-transform: uppercase;
+    color: #ffffff; }
 
 section#contact {
   display: -ms-flexbox;
@@ -412,12 +423,14 @@ section#contact {
           background-color: rgba(0, 128, 0, 0.25); }
       section#contact .contact-wrapper .contact-form input[type="submit"].submit {
         padding: 15px 50px;
-        background-color: #ed0049;
-        border: none;
+        background-color: transparent;
+        border: 3px solid #ed0049;
         margin: 20px 0;
         color: white;
         font-size: 1.5rem;
         cursor: pointer; }
+        section#contact .contact-wrapper .contact-form input[type="submit"].submit:hover {
+          background-color: #ed0049; }
     section#contact .contact-wrapper label {
       color: #ffffff;
       text-align: left;
@@ -451,7 +464,28 @@ section#contact {
   height: 130px;
   margin: 35px;
   text-align: center;
-  border-radius: 50%; }
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  position: relative; }
+  .skill-box:after {
+    content: attr(data-text);
+    position: absolute;
+    bottom: -90px;
+    left: 50%;
+    color: #ffffff;
+    transform: translateX(-50%);
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    padding: 0 5px;
+    width: 150px; }
+  .skill-box:hover {
+    background-color: #ed0049; }
+    .skill-box:hover:after {
+      bottom: -45px;
+      opacity: 1; }
   .skill-box .img-skills {
     display: block;
     max-width: 100%;

@@ -13,11 +13,19 @@ section {
             min-height: 100%;
         }
 
-        .row {
+        .skills-wrapper {
             display: flex;
             align-items: center;
             justify-content: space-around;
             flex-wrap: wrap;
+            margin: 25px 0 50px;
+        }
+
+        h3 {
+            font-size: $h3FontSize;
+            margin: 50px 0 0;
+            text-transform: uppercase;
+            color: #ffffff;
         }
     }
 
@@ -96,12 +104,15 @@ section {
                 input[type="submit"] {
                     &.submit {
                         padding: 15px 50px;
-                        background-color: $secondColor;
-                        border: none;
+                        background-color: transparent;
+                        border: 3px solid #ed0049;
                         margin: 20px 0;
                         color: white;
                         font-size: 1.5rem;
                         cursor: pointer;
+                        &:hover{
+                            background-color: #ed0049;
+                        }
                     }
                 }
             }
@@ -151,6 +162,33 @@ section {
     margin: 35px;
     text-align: center;
     border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+
+    &:after {
+        content: attr(data-text);
+        position: absolute;
+        bottom: -90px;
+        left: 50%;
+        color: #ffffff;
+        transform: translateX(-50%);
+        font-size: 1.25rem;
+        text-transform: uppercase;
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+        text-align: center;
+        padding: 0 5px;
+        width: 150px;
+    }
+
+    &:hover {
+        background-color: $secondColor;
+
+        &:after {
+            bottom: -45px;
+            opacity: 1;
+        }
+    }
 
     .img-skills {
         display: block;

@@ -38,7 +38,8 @@
         <div class="container">
             <div class="row">
                 <div class="name_container">
-                    <h1 class="name_container-title"><span>Michał</span><br>Sieński<span class="dot">.</span></h1>
+                    <h1 class="name_container-title">
+                        <span>Michał</span><br>Sieński<span class="dot">.</span></h1>
                     <span class="name_container-subtitle ">Front End Developer & Web Designer</span>
                 </div>
                 <div class="main-image">
@@ -54,7 +55,7 @@
         <div class="menu-wrapper">
             <ul class="menu">
                 <li class="menu-item">
-                    <a href="#">
+                    <a href="#about-me">
                         <div class="item-box">
                             <div class="main-face">O mnie</div>
                             <div class="top-face"><i class="fa fa-question-circle"></i></div>
@@ -62,7 +63,7 @@
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="#">
+                    <a href="#skills">
                         <div class="item-box">
                             <div class="main-face">Umiejętności</div>
                             <div class="top-face"><i class="fa fa-envelope-o"></i></div>
@@ -70,7 +71,7 @@
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="#">
+                    <a href="#portfolio">
                         <div class="item-box">
                             <div class="main-face">Porfolio</div>
                             <div class="top-face"><i class="fa fa-envelope-o"></i></div>
@@ -78,9 +79,9 @@
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="#">
+                    <a href="#" target="_blank">
                         <div class="item-box">
-                            <div class="main-face">Moje CV</div>
+                            <div class="main-face">Zobacz CV</div>
                             <div class="top-face"><i class="fa fa-envelope-o"></i></div>
                         </div>
                     </a>
@@ -109,37 +110,39 @@
     <section id="skills">
         <div class="skills-gradient">
             <div class="container">
-                <h2 class="text-center">Umiejętności</h2>
                 <div class="row">
-                    <div class="skill-box">
-                        <img class="img-skills" src="dist/images/skills/html.png" alt="html skill icon">
-                    </div>
-                    <div class="skill-box">
-                        <img class="img-skills" src="dist/images/skills/css.png" alt="css skill icon">
-                    </div>
-                    <div class="skill-box">
-                        <img class="img-skills" src="dist/images/skills/sass.png" alt="sass skill icon">
-                    </div>
-                    <div class="skill-box">
-                        <img class="img-skills" src="dist/images/skills/ap.png" alt="skill icon">
-                    </div>
-                    <div class="skill-box">
-                        <img class="img-skills" src="dist/images/skills/js.png" alt="skill icon">
-                    </div>
-                    <div class="skill-box">
-                        <img class="img-skills" src="dist/images/skills/jquery.png" alt="skill icon">
-                    </div>
-                    <div class="skill-box">
-                        <img class="img-skills" src="dist/images/skills/bootstrap.png" alt="skill icon">
-                    </div>
-                    <div class="skill-box">
-                        <img class="img-skills" src="dist/images/skills/rwd.png" alt="skill icon">
-                    </div>
-                    <div class="skill-box">
-                        <img class="img-skills" src="dist/images/skills/pth.png" alt="skill icon">
-                    </div>
-                    <div class="skill-box">
-                        <img class="img-skills" src="dist/images/skills/wordpress.png" alt="skill icon">
+                    <h3 class="text-center">Umiejętności</h3>
+                    <div class="skills-wrapper">
+                        <div class="skill-box" data-text="html 5">
+                            <img class="img-skills" src="dist/images/skills/html.png" alt="html skill icon">
+                        </div>
+                        <div class="skill-box" data-text="css 3">
+                            <img class="img-skills" src="dist/images/skills/css.png" alt="css skill icon">
+                        </div>
+                        <div class="skill-box" data-text="sass">
+                            <img class="img-skills" src="dist/images/skills/sass.png" alt="sass skill icon">
+                        </div>
+                        <div class="skill-box" data-text="photoshop">
+                            <img class="img-skills" src="dist/images/skills/ap.png" alt="skill icon">
+                        </div>
+                        <div class="skill-box" data-text="javascript">
+                            <img class="img-skills" src="dist/images/skills/js.png" alt="skill icon">
+                        </div>
+                        <div class="skill-box" data-text="jquery">
+                            <img class="img-skills" src="dist/images/skills/jquery.png" alt="skill icon">
+                        </div>
+                        <div class="skill-box" data-text="bootstrap">
+                            <img class="img-skills" src="dist/images/skills/bootstrap.png" alt="skill icon">
+                        </div>
+                        <div class="skill-box" data-text="rwd">
+                            <img class="img-skills" src="dist/images/skills/rwd.png" alt="skill icon">
+                        </div>
+                        <div class="skill-box" data-text="psd to rwd">
+                            <img class="img-skills" src="dist/images/skills/pth.png" alt="skill icon">
+                        </div>
+                        <div class="skill-box" data-text="wordpress">
+                            <img class="img-skills" src="dist/images/skills/wordpress.png" alt="skill icon">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -150,7 +153,7 @@
             <div class="row">
                 <div class="item">
                     <div class="portfolio-left-box" data-animation="animated rollIn">
-                        <img src="/dist/images/lagowska.png" alt="" class="img-responsive center-block">
+                        <img src="http://www.iconvisual.com.au/images/BLOG_IMAGES/mobile-sites.png" alt="" class="img-responsive center-block">
                     </div>
                     <div class="portfolio-right-box" data-animation="animated fadeInRight">
                         <div class="project-description">
@@ -171,42 +174,42 @@
                             <div class="project-technics">
                                 <ul class="list-inline">
                                     <li>
-                                        <div class="pt-item" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="PSD to HTML">
+                                        <div class="technics-item" data-title="PSD to HTML">
                                             <img src="/dist/images/skills/pth.png" alt="">
                                         </div>
                                     </li>
                                     <li>
-                                        <div class="pt-item" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="HTML5">
+                                        <div class="technics-item" data-title="HTML5">
                                             <img src="/dist/images/skills/html.png" alt="">
                                         </div>
                                     </li>
                                     <li>
-                                        <div class="pt-item" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="CSS3">
+                                        <div class="technics-item" data-title="CSS3">
                                             <img src="/dist/images/skills/css.png" alt="">
                                         </div>
                                     </li>
                                     <li>
-                                        <div class="pt-item" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="JavaScript">
+                                        <div class="technics-item" data-title="JavaScript">
                                             <img src="/dist/images/skills/js.png" alt="">
                                         </div>
                                     </li>
                                     <li>
-                                        <div class="pt-item" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="jQuery">
+                                        <div class="technics-item" data-title="jQuery">
                                             <img src="/dist/images/skills/jquery.png" alt="">
                                         </div>
                                     </li>
                                     <li>
-                                        <div class="pt-item" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Responsive Web Design">
+                                        <div class="technics-item" data-title="Responsive Web Design">
                                             <img src="/dist/images/skills/rwd.png" alt="">
                                         </div>
                                     </li>
                                     <li>
-                                        <div class="pt-item" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Bootstrap">
+                                        <div class="technics-item" data-title="Bootstrap">
                                             <img src="/dist/images/skills/bootstrap.png" alt="">
                                         </div>
                                     </li>
                                     <li>
-                                        <div class="pt-item" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Wordpress">
+                                        <div class="technics-item" data-title="Wordpress">
                                             <img src="/dist/images/skills/wordpress.png" alt="">
                                         </div>
                                     </li>
@@ -272,6 +275,11 @@
 
     <script src="/dist/js/particles.js" charset="utf-8"></script>
     <script src="/dist/js/main.js" charset="utf-8"></script>
+</body>
+
+</html>
+<script src="/dist/js/particles.js" charset="utf-8"></script>
+<script src="/dist/js/main.js" charset="utf-8"></script>
 </body>
 
 </html>

@@ -20,6 +20,7 @@ body {
     position: fixed;
     width: 100%;
     top: 0;
+    z-index: 1;
     box-shadow: 0 5px 5px rgba(0,0,0,.14), 0 5px 8px rgba(0,0,0,.28);
 }
 
@@ -91,6 +92,10 @@ body {
     }
 }
 
+.text-center {
+    text-align: center;
+}
+
 .arrow-top {
     width: 60px;
     height: 60px;
@@ -152,19 +157,11 @@ body {
     flex-wrap: wrap;
     margin: 50px 0;
     padding: 0 10px;
-
-    .portfolio-left-box {
-        width: 50%;
-    }
-
-    .portfolio-right-box {
-        width: 50%;
-    }
 }
 
 .project-description {
     font-size: 16px;
-    padding: 80px 0 20px 40px;
+    padding: 30px 0 20px 40px;
 
     .project-title {
         line-height: 1.1;
@@ -177,13 +174,15 @@ body {
 }
 
 .list-inline {
-    display: inline-flex;
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 10px 0 15px;
     li {
         list-style: none;
     }
 
-    .pt-item {
+    .technics-item {
         & > img {
             width: 55px;
             display: block;
