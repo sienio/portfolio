@@ -142,10 +142,20 @@ $(document).ready(function () {
 
     var skillBoxes = $('.skills-wrapper');
 
-    skillBoxes.find(".skill-box").each(function(){
+    skillBoxes.find('.skill-box').each(function(i){
         var $active = $(this).data("active");
-        $(this).find('li').addClass('active');
 
+        $(this).find('.skill-box-percent').append('<li></li><li></li><li></li><li></li><li></li>');
+        var $allLiElements = $(this).find('li');
+
+        $allLiElements.each(function(i){
+            if (i < $active ) {
+                $(this).addClass('active');
+            }
+            if (i === ($active - 1)) {
+                $(this).addClass('pulse');
+            }
+        })
     })
 
 

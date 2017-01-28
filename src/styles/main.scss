@@ -3,15 +3,14 @@
 
 @import "modules/variables";
 @import "modules/mixins";
-@import "modules/partials";
 
 @import "modules/animations";
-
-
 
 @import "modules/all";
 
 @import "partials/loadingcube";
-// @import "partials/thumbs";
 @import "partials/mainSection";
+@import "partials/portfolio";
 @import "partials/skillsSection";
+@import "partials/contactSection";
+@import "partials/footer";

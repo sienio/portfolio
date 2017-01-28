@@ -29,131 +29,6 @@
     }
 }
 
-&#contact {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url("/dist/images/contact/background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
-    background-attachment: fixed;
-
-    .contact-wrapper {
-        background-color: $firstColor;
-        height: 100%;
-        width: 100%;
-        margin: 50px auto;
-        padding-top: 50px;
-        box-shadow: 0 5px 5px rgba(0,0,0,.14), 0 -5px 8px rgba(0,0,0,.28), -5px 0 8px rgba(0,0,0,.28), 5px 0 8px rgba(0,0,0,.28);
-        opacity: 0.85;
-
-        .contact-form {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            position: relative;
-
-            input:not([type="submit"]) {
-                width: 80%;
-                color: #ffffff;
-                padding: 5px 10px;
-                background: #ffffff;
-                border: none;
-                border: 1px solid transparent;
-                border-left: 3px solid #ed0049;
-                transition: border 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
-                font-size: 1.15rem;
-                font-weight: 100;
-
-                &.invalid {
-                    border: 1px solid #ed0049;
-                    border-left: 5px solid #ed0049;
-                    background-color: rgba(237, 0, 73, 0.25);
-                }
-
-                &.valid {
-                    border: 1px solid green;
-                    border-left: 5px solid green;
-                    background-color: rgba(0, 128, 0, 0.25);
-                }
-            }
-
-            textarea {
-                width: 80%;
-                padding: 5px 10px;
-                background: #ffffff;
-                border: none;
-                border-left: 3px solid $secondColor;
-                color: #ffffff;
-                font-size: 1rem;
-
-                &.invalid {
-                    border: 1px solid #ed0049;
-                    border-left: 5px solid #ed0049;
-                    background-color: rgba(237, 0, 73, 0.25);
-                }
-
-                &.valid {
-                    border: 1px solid green;
-                    border-left: 5px solid green;
-                    background-color: rgba(0, 128, 0, 0.25);
-                }
-            }
-
-            input[type="submit"] {
-                &.submit {
-                    padding: 15px 50px;
-                    background-color: transparent;
-                    border: 3px solid #ed0049;
-                    margin: 20px 0;
-                    color: white;
-                    font-size: 1.5rem;
-                    cursor: pointer;
-
-                    &:hover {
-                        background-color: #ed0049;
-                    }
-                }
-            }
-        }
-
-        label {
-            color: #ffffff;
-            text-align: left;
-            width: 80%;
-            margin: 15px 0 5px;
-            font-size: 1.25rem;
-        }
-
-        .statement {
-            display: none;
-            transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
-            top: 10px;
-            position: relative;
-            padding: 5px 10px;
-            border-radius: 3px;
-
-            &.error {
-                display: block;
-                background: rgb(255, 255, 255);
-                color: red;
-            }
-
-            &.success {
-                display: block;
-                background: rgb(255, 255, 255);
-                color: green;
-            }
-        }
-    }
-}
-
-.disabled {
-    cursor: not-allowed !important;
-}
-
 .skill-box {
     border: 4px solid $secondColor;
     padding: 15px;
@@ -190,6 +65,7 @@
         width: 30px;
         height: 10px;
         margin-right: 5px;
+        box-shadow: inset 0 0 10px 1px rgba(117,182,255,0.4), 0 0 20px rgba(117,182,255,0.1);
 
         &.active {
             background: rgba(255,255,255,0.9);
