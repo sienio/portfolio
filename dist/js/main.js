@@ -40,7 +40,6 @@ $(document).ready(function () {
 
 
     // form validation
-    //Walidacja nazwy
     $('#name').on('blur, keyup', function () {
         var input = $(this);
         var name_length = input.val().length;
@@ -135,9 +134,20 @@ $(document).ready(function () {
 
         if (!(name.hasClass('valid') && email.hasClass('valid') && message.hasClass('valid'))) {
             event.preventDefault();
-            // alert("Pomyślnie wysłano formularz.");
         } else {
             $(this).removeClass('disabled');
         }
     });
+
+
+    var skillBoxes = $('.skills-wrapper');
+
+    skillBoxes.find(".skill-box").each(function(){
+        var $active = $(this).data("active");
+        $(this).find('li').addClass('active');
+
+    })
+
+
+
 })

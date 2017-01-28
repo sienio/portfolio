@@ -1,11 +1,12 @@
-.loading-wrapper{
+.loading-wrapper {
     position: fixed;
     height: 100vh;
     width: 100%;
     background-color: $mainSectionColor;
     z-index: 1000;
     overflow: hidden;
-    .perspective{
+
+    .perspective {
         width: $loadingCubeSize;
         height: $loadingCubeSize;
         position: absolute;
@@ -13,14 +14,16 @@
         left: 50%;
         perspective: 2 * $loadingCubeSize;
         transform: translate(-50%, -50%);
-        .cube{
+
+        .cube {
             width: 100%;
             height: 100%;
             position: relative;
             transform-style: preserve-3d;
             transform: rotateY(35deg) rotateX(-25deg);
             animation: cubeAnimation $loadingTime ease-in-out infinite;
-            > div{
+
+            > div {
                 width: 100%;
                 height: 100%;
                 position: absolute;
@@ -28,32 +31,84 @@
                 background: linear-gradient(to right, $loadingCubeColor 0%, rgba(0,188,212,0.8) 100%);
                 box-shadow: inset 35px -30px 102px 0 rgba(21,101,192,0.71);
                 border: 1px solid rgba(8, 110, 156, 0.54);
-                &.html{
+
+                &.html {
                     transform: translateZ($loadingCubeSize/2);
                 }
-                &.javascript{
-                    transform: translateZ(-$loadingCubeSize/2) rotateY(180deg);;
 
+                &.javascript {
+                    transform: translateZ(-$loadingCubeSize/2) rotateY(180deg);
                 }
-                &.jquery{
+
+                &.jquery {
                     transform: rotateY(-90deg) translateZ($loadingCubeSize/2);
                 }
-                &.css{
+
+                &.css {
                     transform: rotateY(90deg) translateZ($loadingCubeSize/2);
                 }
-                &.top   {
+
+                &.top {
                     transform: rotateX(90deg) translateZ($loadingCubeSize/2);
                 }
-                &.bottom{
+
+                &.bottom {
                     transform: rotateX(90deg) translateZ(-$loadingCubeSize/2);
-                    box-shadow: 0px 0px 100px 60px rgba(20, 24, 34, 0.56);
+                    box-shadow: 0 0 100px 60px rgba(20, 24, 34, 0.56);
                 }
-                img{
+
+                img {
                     width: 100%;
                 }
             }
         }
-
     }
+}
 
+#load {
+    position: absolute;
+    width: 600px;
+    height: 36px;
+    left: 50%;
+    bottom: 15%;
+    margin-left: -300px;
+    overflow: visible;
+    user-select: none;
+    cursor: default;
+
+    div {
+        position: absolute;
+        width: 20px;
+        height: 36px;
+        opacity: 0;
+        font-family: Helvetica, Arial, sans-serif;
+        animation: move 2s linear infinite;
+        transform: rotate(180deg);
+        color: $thirdColor;
+        font-size: 2rem;
+
+        &:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        &:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        &:nth-child(4) {
+            animation-delay: 0.6s;
+        }
+
+        &:nth-child(5) {
+            animation-delay: 0.8s;
+        }
+
+        &:nth-child(6) {
+            animation-delay: 1s;
+        }
+
+        &:nth-child(7) {
+            animation-delay: 1.2s;
+        }
+    }
 }

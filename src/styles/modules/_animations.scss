@@ -30,3 +30,37 @@
         transform: translateY(50px);
     }
 }
+
+@keyframes move {
+  0% {
+    left:0;
+    opacity:0;
+  }
+	35% {
+		left: 41%;
+		transform:rotate(0deg);
+		opacity:1;
+	}
+	65% {
+		left:59%;
+		transform:rotate(0deg);
+		opacity:1;
+	}
+	100% {
+		left:100%;
+		transform:rotate(-180deg);
+		opacity:0;
+	}
+}
+
+@keyframes pulse {
+    0% {
+        background: rgba(255,255,255,1);
+        box-shadow: inset 0 0 10px 2px rgba(117,182,255,0.5), 0 0 40px 2px rgba(105,135,255,1);
+    }
+
+    100% {
+        background: rgba(255,255,255,0);
+        box-shadow: inset 0 0 10px 2px rgba(117,182,255,0.5), 0 0 30px 2px rgba(105,135,255,0.3);
+    }
+}

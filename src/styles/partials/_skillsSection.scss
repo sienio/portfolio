@@ -1,149 +1,150 @@
-section {
-    // min-height: 50vh;
-    &#skills {
-        width: 100%;
-        background-image: url("/dist/images/skills/background.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 50% 50%;
-        background-attachment: fixed;
+// min-height: 50vh;
 
-        .skills-gradient {
-            background: $skills-gradient;
-            min-height: 100%;
-        }
+&#skills {
+    width: 100%;
+    background-image: url("/dist/images/skills/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-attachment: fixed;
 
-        .skills-wrapper {
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin: 25px 0 50px;
-        }
-
-        h3 {
-            font-size: $h3FontSize;
-            margin: 50px 0 0;
-            text-transform: uppercase;
-            color: #ffffff;
-        }
+    .skills-gradient {
+        background: $skills-gradient;
+        min-height: 100%;
     }
 
-    &#contact {
+    .skills-wrapper {
         display: flex;
         align-items: center;
-        justify-content: center;
-        background-image: url("/dist/images/contact/background.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 50% 50%;
-        background-attachment: fixed;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 25px 0 50px;
+    }
 
-        .contact-wrapper {
-            background-color: $firstColor;
-            height: 100%;
-            width: 100%;
-            margin: 50px auto;
-            padding-top: 50px;
-            box-shadow: 0 5px 5px rgba(0,0,0,.14), 0 -5px 8px rgba(0,0,0,.28), -5px 0 8px rgba(0,0,0,.28), 5px 0 8px rgba(0,0,0,.28);
+    h3 {
+        font-size: $h3FontSize;
+        margin: 50px 0 0;
+        text-transform: uppercase;
+        color: #ffffff;
+    }
+}
 
-            .contact-form {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-                position: relative;
+&#contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/dist/images/contact/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-attachment: fixed;
 
-                input:not([type="submit"]) {
-                    width: 80%;
-                    color: #ffffff;
-                    padding: 5px 10px;
-                    background: #ffffff;
-                    border: none;
-                    border: 1px solid transparent;
-                    border-left: 3px solid #ed0049;
-                    transition: border 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
-                    font-size: 1.15rem;
-                    font-weight: 100;
+    .contact-wrapper {
+        background-color: $firstColor;
+        height: 100%;
+        width: 100%;
+        margin: 50px auto;
+        padding-top: 50px;
+        box-shadow: 0 5px 5px rgba(0,0,0,.14), 0 -5px 8px rgba(0,0,0,.28), -5px 0 8px rgba(0,0,0,.28), 5px 0 8px rgba(0,0,0,.28);
+        opacity: 0.85;
 
-                    &.invalid {
-                        border: 1px solid #ed0049;
-                        border-left: 5px solid #ed0049;
-                        background-color: rgba(237, 0, 73, 0.25);
-                    }
+        .contact-form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
 
-                    &.valid {
-                        border: 1px solid green;
-                        border-left: 5px solid green;
-                        background-color: rgba(0, 128, 0, 0.25);
-                    }
-                }
-
-                textarea {
-                    width: 80%;
-                    padding: 5px 10px;
-                    background: #ffffff;
-                    border: none;
-                    border-left: 3px solid $secondColor;
-                    color: #ffffff;
-                    font-size: 1rem;
-
-                    &.invalid {
-                        border: 1px solid #ed0049;
-                        border-left: 5px solid #ed0049;
-                        background-color: rgba(237, 0, 73, 0.25);
-                    }
-
-                    &.valid {
-                        border: 1px solid green;
-                        border-left: 5px solid green;
-                        background-color: rgba(0, 128, 0, 0.25);
-                    }
-                }
-
-                input[type="submit"] {
-                    &.submit {
-                        padding: 15px 50px;
-                        background-color: transparent;
-                        border: 3px solid #ed0049;
-                        margin: 20px 0;
-                        color: white;
-                        font-size: 1.5rem;
-                        cursor: pointer;
-                        &:hover{
-                            background-color: #ed0049;
-                        }
-                    }
-                }
-            }
-
-            label {
-                color: #ffffff;
-                text-align: left;
+            input:not([type="submit"]) {
                 width: 80%;
-                margin: 15px 0 5px;
-                font-size: 1.25rem;
+                color: #ffffff;
+                padding: 5px 10px;
+                background: #ffffff;
+                border: none;
+                border: 1px solid transparent;
+                border-left: 3px solid #ed0049;
+                transition: border 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+                font-size: 1.15rem;
+                font-weight: 100;
+
+                &.invalid {
+                    border: 1px solid #ed0049;
+                    border-left: 5px solid #ed0049;
+                    background-color: rgba(237, 0, 73, 0.25);
+                }
+
+                &.valid {
+                    border: 1px solid green;
+                    border-left: 5px solid green;
+                    background-color: rgba(0, 128, 0, 0.25);
+                }
             }
 
-            .statement {
-                display: none;
-                transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
-                top: 10px;
-                position: relative;
+            textarea {
+                width: 80%;
                 padding: 5px 10px;
-                border-radius: 3px;
+                background: #ffffff;
+                border: none;
+                border-left: 3px solid $secondColor;
+                color: #ffffff;
+                font-size: 1rem;
 
-                &.error {
-                    display: block;
-                    background: rgb(255, 255, 255);
-                    color: red;
+                &.invalid {
+                    border: 1px solid #ed0049;
+                    border-left: 5px solid #ed0049;
+                    background-color: rgba(237, 0, 73, 0.25);
                 }
 
-                &.success {
-                    display: block;
-                    background: rgb(255, 255, 255);
-                    color: green;
+                &.valid {
+                    border: 1px solid green;
+                    border-left: 5px solid green;
+                    background-color: rgba(0, 128, 0, 0.25);
                 }
+            }
+
+            input[type="submit"] {
+                &.submit {
+                    padding: 15px 50px;
+                    background-color: transparent;
+                    border: 3px solid #ed0049;
+                    margin: 20px 0;
+                    color: white;
+                    font-size: 1.5rem;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #ed0049;
+                    }
+                }
+            }
+        }
+
+        label {
+            color: #ffffff;
+            text-align: left;
+            width: 80%;
+            margin: 15px 0 5px;
+            font-size: 1.25rem;
+        }
+
+        .statement {
+            display: none;
+            transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+            top: 10px;
+            position: relative;
+            padding: 5px 10px;
+            border-radius: 3px;
+
+            &.error {
+                display: block;
+                background: rgb(255, 255, 255);
+                color: red;
+            }
+
+            &.success {
+                display: block;
+                background: rgb(255, 255, 255);
+                color: green;
             }
         }
     }
@@ -159,19 +160,54 @@ section {
     display: inline-block;
     width: 130px;
     height: 130px;
-    margin: 35px;
+    margin: 35px 35px 50px;
     text-align: center;
     border-radius: 50%;
     transition: all 0.3s ease-in-out;
     position: relative;
+
+    html {
+        min-height: 100%;
+    }
+
+    .skill-box-percent {
+        margin: auto;
+        height: 10px;
+        width: 175px;
+        position: absolute;
+        top: -90px;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: all 0.3s ease-in-out;
+        list-style: none;
+        padding: 0;
+        opacity: 0;
+    }
+
+    li {
+        display: block;
+        float: left;
+        width: 30px;
+        height: 10px;
+        margin-right: 5px;
+
+        &.active {
+            background: rgba(255,255,255,0.9);
+            box-shadow: inset 0 0 10px 2px rgba(117,182,255,0.5), 0 0 20px rgba(117,182,214,0.5);
+        }
+
+        &.pulse {
+            animation: pulse 1s alternate infinite;
+        }
+    }
 
     &:after {
         content: attr(data-text);
         position: absolute;
         bottom: -90px;
         left: 50%;
-        color: #ffffff;
         transform: translateX(-50%);
+        color: #ffffff;
         font-size: 1.25rem;
         text-transform: uppercase;
         opacity: 0;
@@ -185,7 +221,12 @@ section {
         background-color: $secondColor;
 
         &:after {
-            bottom: -45px;
+            bottom: -40px;
+            opacity: 1;
+        }
+
+        & .skill-box-percent {
+            top: -40px;
             opacity: 1;
         }
     }

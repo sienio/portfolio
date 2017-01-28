@@ -41,6 +41,31 @@
     opacity: 0;
     transform: translateY(50px); } }
 
+@keyframes move {
+  0% {
+    left: 0;
+    opacity: 0; }
+  35% {
+    left: 41%;
+    transform: rotate(0deg);
+    opacity: 1; }
+  65% {
+    left: 59%;
+    transform: rotate(0deg);
+    opacity: 1; }
+  100% {
+    left: 100%;
+    transform: rotate(-180deg);
+    opacity: 0; } }
+
+@keyframes pulse {
+  0% {
+    background: white;
+    box-shadow: inset 0 0 10px 2px rgba(117, 182, 255, 0.5), 0 0 40px 2px #6987ff; }
+  100% {
+    background: rgba(255, 255, 255, 0);
+    box-shadow: inset 0 0 10px 2px rgba(117, 182, 255, 0.5), 0 0 30px 2px rgba(105, 135, 255, 0.3); } }
+
 * {
   box-sizing: border-box;
   font-family: Lato, sans-serif;
@@ -164,6 +189,8 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
   margin: 50px 0;
   padding: 0 10px; }
 
@@ -177,6 +204,8 @@ body {
     font-weight: 300;
     font-size: 36px;
     margin-bottom: 50px; }
+    .project-description .project-title .project-link > a {
+      font-size: 1rem; }
 
 .list-inline {
   display: -ms-flexbox;
@@ -247,9 +276,45 @@ body {
           transform: rotateX(90deg) translateZ(100px); }
         .loading-wrapper .perspective .cube > div.bottom {
           transform: rotateX(90deg) translateZ(-100px);
-          box-shadow: 0px 0px 100px 60px rgba(20, 24, 34, 0.56); }
+          box-shadow: 0 0 100px 60px rgba(20, 24, 34, 0.56); }
         .loading-wrapper .perspective .cube > div img {
           width: 100%; }
+
+#load {
+  position: absolute;
+  width: 600px;
+  height: 36px;
+  left: 50%;
+  bottom: 15%;
+  margin-left: -300px;
+  overflow: visible;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: default; }
+  #load div {
+    position: absolute;
+    width: 20px;
+    height: 36px;
+    opacity: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    animation: move 2s linear infinite;
+    transform: rotate(180deg);
+    color: rgba(3, 169, 244, 0.8);
+    font-size: 2rem; }
+    #load div:nth-child(2) {
+      animation-delay: 0.2s; }
+    #load div:nth-child(3) {
+      animation-delay: 0.4s; }
+    #load div:nth-child(4) {
+      animation-delay: 0.6s; }
+    #load div:nth-child(5) {
+      animation-delay: 0.8s; }
+    #load div:nth-child(6) {
+      animation-delay: 1s; }
+    #load div:nth-child(7) {
+      animation-delay: 1.2s; }
 
 section#main {
   background-color: #000626;
@@ -331,17 +396,17 @@ h2 {
   border-bottom: 1px solid #ed0049;
   text-decoration: none; }
 
-section#skills {
+#skills {
   width: 100%;
   background-image: url("/dist/images/skills/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
   background-attachment: fixed; }
-  section#skills .skills-gradient {
+  #skills .skills-gradient {
     background: linear-gradient(135deg, rgba(0, 6, 38, 0.85) 0%, rgba(5, 9, 28, 0.86) 100%);
     min-height: 100%; }
-  section#skills .skills-wrapper {
+  #skills .skills-wrapper {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
@@ -351,13 +416,13 @@ section#skills {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin: 25px 0 50px; }
-  section#skills h3 {
+  #skills h3 {
     font-size: 2rem;
     margin: 50px 0 0;
     text-transform: uppercase;
     color: #ffffff; }
 
-section#contact {
+#contact {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -369,14 +434,15 @@ section#contact {
   background-size: cover;
   background-position: 50% 50%;
   background-attachment: fixed; }
-  section#contact .contact-wrapper {
+  #contact .contact-wrapper {
     background-color: #000626;
     height: 100%;
     width: 100%;
     margin: 50px auto;
     padding-top: 50px;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.14), 0 -5px 8px rgba(0, 0, 0, 0.28), -5px 0 8px rgba(0, 0, 0, 0.28), 5px 0 8px rgba(0, 0, 0, 0.28); }
-    section#contact .contact-wrapper .contact-form {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.14), 0 -5px 8px rgba(0, 0, 0, 0.28), -5px 0 8px rgba(0, 0, 0, 0.28), 5px 0 8px rgba(0, 0, 0, 0.28);
+    opacity: 0.85; }
+    #contact .contact-wrapper .contact-form {
       display: -ms-flexbox;
       display: flex;
       -ms-flex-align: center;
@@ -386,7 +452,7 @@ section#contact {
       -ms-flex-direction: column;
           flex-direction: column;
       position: relative; }
-      section#contact .contact-wrapper .contact-form input:not([type="submit"]) {
+      #contact .contact-wrapper .contact-form input:not([type="submit"]) {
         width: 80%;
         color: #ffffff;
         padding: 5px 10px;
@@ -397,15 +463,15 @@ section#contact {
         transition: border 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
         font-size: 1.15rem;
         font-weight: 100; }
-        section#contact .contact-wrapper .contact-form input:not([type="submit"]).invalid {
+        #contact .contact-wrapper .contact-form input:not([type="submit"]).invalid {
           border: 1px solid #ed0049;
           border-left: 5px solid #ed0049;
           background-color: rgba(237, 0, 73, 0.25); }
-        section#contact .contact-wrapper .contact-form input:not([type="submit"]).valid {
+        #contact .contact-wrapper .contact-form input:not([type="submit"]).valid {
           border: 1px solid green;
           border-left: 5px solid green;
           background-color: rgba(0, 128, 0, 0.25); }
-      section#contact .contact-wrapper .contact-form textarea {
+      #contact .contact-wrapper .contact-form textarea {
         width: 80%;
         padding: 5px 10px;
         background: #ffffff;
@@ -413,15 +479,15 @@ section#contact {
         border-left: 3px solid #ed0049;
         color: #ffffff;
         font-size: 1rem; }
-        section#contact .contact-wrapper .contact-form textarea.invalid {
+        #contact .contact-wrapper .contact-form textarea.invalid {
           border: 1px solid #ed0049;
           border-left: 5px solid #ed0049;
           background-color: rgba(237, 0, 73, 0.25); }
-        section#contact .contact-wrapper .contact-form textarea.valid {
+        #contact .contact-wrapper .contact-form textarea.valid {
           border: 1px solid green;
           border-left: 5px solid green;
           background-color: rgba(0, 128, 0, 0.25); }
-      section#contact .contact-wrapper .contact-form input[type="submit"].submit {
+      #contact .contact-wrapper .contact-form input[type="submit"].submit {
         padding: 15px 50px;
         background-color: transparent;
         border: 3px solid #ed0049;
@@ -429,26 +495,26 @@ section#contact {
         color: white;
         font-size: 1.5rem;
         cursor: pointer; }
-        section#contact .contact-wrapper .contact-form input[type="submit"].submit:hover {
+        #contact .contact-wrapper .contact-form input[type="submit"].submit:hover {
           background-color: #ed0049; }
-    section#contact .contact-wrapper label {
+    #contact .contact-wrapper label {
       color: #ffffff;
       text-align: left;
       width: 80%;
       margin: 15px 0 5px;
       font-size: 1.25rem; }
-    section#contact .contact-wrapper .statement {
+    #contact .contact-wrapper .statement {
       display: none;
       transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
       top: 10px;
       position: relative;
       padding: 5px 10px;
       border-radius: 3px; }
-      section#contact .contact-wrapper .statement.error {
+      #contact .contact-wrapper .statement.error {
         display: block;
         background: white;
         color: red; }
-      section#contact .contact-wrapper .statement.success {
+      #contact .contact-wrapper .statement.success {
         display: block;
         background: white;
         color: green; }
@@ -462,18 +528,43 @@ section#contact {
   display: inline-block;
   width: 130px;
   height: 130px;
-  margin: 35px;
+  margin: 35px 35px 50px;
   text-align: center;
   border-radius: 50%;
   transition: all 0.3s ease-in-out;
   position: relative; }
+  .skill-box html {
+    min-height: 100%; }
+  .skill-box .skill-box-percent {
+    margin: auto;
+    height: 10px;
+    width: 175px;
+    position: absolute;
+    top: -90px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s ease-in-out;
+    list-style: none;
+    padding: 0;
+    opacity: 0; }
+  .skill-box li {
+    display: block;
+    float: left;
+    width: 30px;
+    height: 10px;
+    margin-right: 5px; }
+    .skill-box li.active {
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: inset 0 0 10px 2px rgba(117, 182, 255, 0.5), 0 0 20px rgba(117, 182, 214, 0.5); }
+    .skill-box li.pulse {
+      animation: pulse 1s alternate infinite; }
   .skill-box:after {
     content: attr(data-text);
     position: absolute;
     bottom: -90px;
     left: 50%;
-    color: #ffffff;
     transform: translateX(-50%);
+    color: #ffffff;
     font-size: 1.25rem;
     text-transform: uppercase;
     opacity: 0;
@@ -484,7 +575,10 @@ section#contact {
   .skill-box:hover {
     background-color: #ed0049; }
     .skill-box:hover:after {
-      bottom: -45px;
+      bottom: -40px;
+      opacity: 1; }
+    .skill-box:hover .skill-box-percent {
+      top: -40px;
       opacity: 1; }
   .skill-box .img-skills {
     display: block;
